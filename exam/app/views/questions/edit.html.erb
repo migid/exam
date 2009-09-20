@@ -1,0 +1,34 @@
+<h1>Editing question</h1>
+
+<% form_for(@question) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :answer %><br />
+    <%= f.text_field :answer %>
+  </p>
+  <p>
+    <%= f.label :knowledges %><br />
+    <%for knowledge in Knowledge.all%>
+    <%= check_box_tag 'question[knowledges][]',knowledge.id, @question.knowledges.include?(knowledge.id.to_s)%><%=knowledge.name%>
+    <%end%>
+  </p>
+  <p>
+    <%= f.label :difficulty_id %><br />
+    <%= f.text_field :difficulty_id %>
+  </p>
+  <p>
+    <%= f.label :remark %><br />
+    <%= f.text_field :remark %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @question %> |
+<%= link_to 'Back', questions_path %>

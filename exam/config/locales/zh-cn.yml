@@ -1,0 +1,5 @@
+zh-cn:
+  hello: "你好"
+  please_login: "请先登录"
+  login_error: "用户名或密码错误，请重新输入"
+  exam_system: "考试管理系统"

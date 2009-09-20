@@ -1,0 +1,1 @@
+page.replace_html "selected_knowledges", :partial=>"add_knowledge",@object=>@selected_knowledge 

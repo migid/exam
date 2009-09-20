@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <base href="http://localhost:3000"/>
+  <title>Users: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'tree' %>
+  <%= stylesheet_link_tag 'xtree2' %>
+  <%= javascript_include_tag 'prototype' %>
+  <%= javascript_include_tag 'xtree2' %>
+  <%= javascript_include_tag 'xloadtree2' %>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="left">
+  </div>
+  <div id="content">
+    <p style="color: green"><%= flash[:notice] %></p>
+
+    <%= yield %>
+  </div>
+<div id="footer"></div>
+</body>
+</html>
+<script>
+if (document.getElementById) {
+	var tree = new WebFXLoadTree("考试管理系统", "outline.xml", "", "classic", "images/folder.gif", "images/openfolder.gif");
+    tree.setExpanded(true);
+    $("left").innerHTML = tree.toHtml();
+}
+</script>

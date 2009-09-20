@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree>
+<tree text="用户管理" action="/users"/>
+<tree text="科目管理" action="/subjects"/>
+<tree text="知识点管理" action="/knowledges"/>
+<tree text="难度管理" action="/difficulties"/>
+<tree text="试题管理" action="/questions"/>
+</tree>
+
+

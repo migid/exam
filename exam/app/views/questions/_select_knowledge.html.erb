@@ -1,0 +1,6 @@
+<%if @knowledges%>
+    options:<br/>
+    <%for knowledge in @knowledges%>
+    <%= check_box_tag '',knowledge.id, false, {:onclick=>'alert(this.checked);' + remote_function(:with=>"'id='+value", :url=>{:action=>:add_knowledge})} %><%=knowledge.name%>
+    <%end%>
+<%end%>

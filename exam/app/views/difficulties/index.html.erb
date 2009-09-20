@@ -1,0 +1,24 @@
+<h1>Listing difficulties</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Point</th>
+    <th>Remark</th>
+  </tr>
+
+<% @difficulties.each do |difficulty| %>
+  <tr>
+    <td><%=h difficulty.name %></td>
+    <td><%=h difficulty.point %></td>
+    <td><%=h difficulty.remark %></td>
+    <td><%= link_to 'Show', difficulty %></td>
+    <td><%= link_to 'Edit', edit_difficulty_path(difficulty) %></td>
+    <td><%= link_to 'Destroy', difficulty, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New difficulty', new_difficulty_path %>

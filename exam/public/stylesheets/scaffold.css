@@ -1,4 +1,4 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #fff; color: #333; margin:0; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -52,3 +52,20 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+#header{
+height:80px;
+background-image:url(../images/layout_title2.gif);
+margin:0 auto;
+}
+
+#left{
+height:470px;
+margin:0 auto;
+width:20%;
+float:left;
+}
+
+#content{
+height:100%;
+width:75%;
+}

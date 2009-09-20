@@ -1,0 +1,6 @@
+<%unless @selected_knowledge.empty?%>
+    selected_konwledge:<br/>
+    <%for knowledge in @selected_knowledge%>
+    <%= check_box_tag 'question[knowledges][]',knowledge.id, true %><%=knowledge.name%>
+    <%end%>
+<%end%>

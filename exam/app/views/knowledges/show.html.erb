@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @knowledge.name %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%=h @knowledge.remark %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @knowledge.subject_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_knowledge_path(@knowledge) %> |
+<%= link_to 'Back', knowledges_path %>

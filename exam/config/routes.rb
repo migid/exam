@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :questions
+
+  map.resources :difficulties
+
+  map.resources :knowledges
+  map.resources :subjects
   map.resources :users
   map.connect 'admin', :controller=>'admin', :action=>'login'
 

@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @difficulty.name %>
+</p>
+
+<p>
+  <b>Point:</b>
+  <%=h @difficulty.point %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%=h @difficulty.remark %>
+</p>
+
+
+<%= link_to 'Edit', edit_difficulty_path(@difficulty) %> |
+<%= link_to 'Back', difficulties_path %>

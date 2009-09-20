@@ -3,10 +3,10 @@ class AdminController < ApplicationController
     if request.post?
       user = User.authenticate(params[:name], params[:password])
       if user
-        flash[:notice] = "登录成功"
-        render :action=> 'login'
+        session[:user] = user
+        redirect_to :controller=>:users
       else
-        flash[:notice] = "登录失败"
+        flash[:notice] = I18n.t("login_error")
         render :action=> 'login'
       end
     end

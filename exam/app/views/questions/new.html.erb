@@ -1,0 +1,39 @@
+<h1>New question</h1>
+
+<% form_for(@question) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :answer %><br />
+    <%= f.text_field :answer %>
+  </p>
+
+  <p>
+    subject:<br />
+    <%= select '', :subject, Subject.all.collect{|subject|[subject.name, subject.id]}, {:prompt=>'请选择'}, {:onchange=>remote_function(:with=>"'subject='+value", :url=>{:action=>:select_knowledge})} %>
+  </p>
+
+  <div id="knowledges">
+  </div>
+
+  <div id="selected_knowledges">
+  </div>
+
+  <p>
+    <%= f.label :difficulty_id %><br />
+    <%= f.select :difficulty_id, Difficulty.all.collect{|difficulty|[difficulty.name, difficulty.id]},{:prompt=>"请选择"} %>
+  </p>
+  <p>
+    <%= f.label :remark %><br />
+    <%= f.text_field :remark %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', questions_path %>
